@@ -1,0 +1,12 @@
+FROM jenkins/jenkins
+
+USER root
+
+RUN apt-get update
+RUN apt-get install -y ansible
+RUN install-plugins.sh  \
+  disable-failed-job \
+  disk-usage \
+  greenballs
+
+USER jenkins
