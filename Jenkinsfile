@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                println 'Hello ${name}'
+                println "Hello ${name}"
             }
         }
         stage('ansible') {
