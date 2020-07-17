@@ -1,0 +1,11 @@
+
+FROM jenkins/inbound-agent
+
+USER root
+
+RUN apt-get update
+RUN cp /usr/local/openjdk-8/bin/java /usr/bin/
+RUN apt-get install -y ssh
+RUN apt-get install -y ansible
+
+USER jenkins
