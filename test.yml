@@ -1,0 +1,9 @@
+--- 
+- 
+  hosts: slaves
+  remote_user: jenkins
+  tasks: 
+    - 
+      command: "touch ansible_df.txt"
+      name: "create txt file."
+
